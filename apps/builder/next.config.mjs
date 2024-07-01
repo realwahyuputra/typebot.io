@@ -66,7 +66,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: 'frame-ancestors https://typebot.woonotif.com',
+            value: 'frame-ancestors https://*.woonotif.com',
           },
         ],
       },
