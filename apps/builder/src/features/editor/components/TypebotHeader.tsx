@@ -36,7 +36,7 @@ import { SupportBubble } from '@/components/SupportBubble'
 import { useTranslate } from '@tolgee/react'
 import { GuestTypebotHeader } from './UnauthenticatedTypebotHeader'
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts'
-import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
+// import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
 // import { Plan } from '@typebot.io/prisma'
 
 export const TypebotHeader = () => {
@@ -44,7 +44,6 @@ export const TypebotHeader = () => {
   // const { workspace } = useWorkspace()
 
   // const { isOpen, onOpen } = useDisclosure()
-  const { onOpen } = useDisclosure()
   const headerBgColor = useColorModeValue('white', 'gray.900')
 
   /*
