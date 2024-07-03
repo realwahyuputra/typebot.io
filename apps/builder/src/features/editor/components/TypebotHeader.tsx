@@ -44,6 +44,7 @@ export const TypebotHeader = () => {
   // const { workspace } = useWorkspace()
 
   // const { isOpen, onOpen } = useDisclosure()
+  const { isOpen } = useDisclosure()
   const headerBgColor = useColorModeValue('white', 'gray.900')
 
   /*
