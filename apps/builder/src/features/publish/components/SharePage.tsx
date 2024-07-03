@@ -9,14 +9,14 @@ import {
   HStack,
   IconButton,
   Stack,
-  Wrap,
+  // Wrap,
   Text,
 } from '@chakra-ui/react'
 import { Plan } from '@typebot.io/prisma'
 import { isDefined, isNotDefined } from '@typebot.io/lib'
 import { isPublicDomainAvailableQuery } from '../queries/isPublicDomainAvailableQuery'
 import { EditableUrl } from './EditableUrl'
-import { integrationsList } from './embeds/EmbedButton'
+// import { integrationsList } from './embeds/EmbedButton'
 import { useTypebot } from '@/features/editor/providers/TypebotProvider'
 import { LockTag } from '@/features/billing/components/LockTag'
 import { UpgradeButton } from '@/features/billing/components/UpgradeButton'
@@ -35,6 +35,7 @@ export const SharePage = () => {
   const { typebot, updateTypebot, publishedTypebot, is404 } = useTypebot()
   const { showToast } = useToast()
 
+  /*
   const handlePublicIdChange = async (publicId: string) => {
     updateTypebot({ updates: { publicId }, save: true })
   }
@@ -43,6 +44,7 @@ export const SharePage = () => {
     ? typebot?.publicId ?? parseDefaultPublicId(typebot.name, typebot.id)
     : ''
   const isPublished = isDefined(publishedTypebot)
+  */
 
   const handlePathnameChange = (pathname: string) => {
     if (!typebot?.customDomain) return
@@ -68,6 +70,7 @@ export const SharePage = () => {
     return true
   }
 
+  /*
   const checkIfPublicIdIsValid = async (publicId: string) => {
     const isLongerThanAllowed = publicId.length >= 4
     if (!isLongerThanAllowed && isCloudProdInstance()) {
@@ -87,6 +90,7 @@ export const SharePage = () => {
 
     return true
   }
+  */
 
   if (is404) return <TypebotNotFoundPage />
   return (
