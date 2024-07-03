@@ -12,7 +12,7 @@ import {
   chakra,
 } from '@chakra-ui/react'
 import {
-  BuoyIcon,
+  // BuoyIcon,
   ChevronLeftIcon,
   CopyIcon,
   PlayIcon,
@@ -71,6 +71,7 @@ export const TypebotHeader = () => {
       {/*
       <LeftElements pos="absolute" left="1rem" onHelpClick={handleHelpClick} />
       */}
+      <LeftElements pos="absolute" left="1rem" />
       <TypebotNav
         display={{ base: 'none', xl: 'flex' }}
         pos={{ base: 'absolute' }}
@@ -87,7 +88,6 @@ export const TypebotHeader = () => {
   )
 }
 
-/*
 const LeftElements = ({
   onHelpClick,
   ...props
@@ -229,6 +229,7 @@ const LeftElements = ({
             </Tooltip>
           </HStack>
         )}
+        {/*
         <Button
           leftIcon={<BuoyIcon />}
           onClick={onHelpClick}
@@ -239,6 +240,7 @@ const LeftElements = ({
             {t('editor.header.helpButton.label')}
           </chakra.span>
         </Button>
+        */}
       </HStack>
       {isSavingLoading && (
         <HStack>
@@ -251,7 +253,6 @@ const LeftElements = ({
     </HStack>
   )
 }
-*/
 
 const RightElements = ({
   isResultsDisplayed,
