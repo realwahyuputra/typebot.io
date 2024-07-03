@@ -46,11 +46,13 @@ export const TypebotHeader = () => {
   const { isOpen, onOpen } = useDisclosure()
   const headerBgColor = useColorModeValue('white', 'gray.900')
 
+  /*
   const handleHelpClick = () => {
     isCloudProdInstance() && workspace?.plan && workspace.plan !== Plan.FREE
       ? onOpen()
       : window.open('https://docs.typebot.io/guides/how-to-get-help', '_blank')
   }
+  */
 
   if (currentUserMode === 'guest') return <GuestTypebotHeader />
   return (
@@ -66,7 +68,9 @@ export const TypebotHeader = () => {
       flexShrink={0}
     >
       {isOpen && <SupportBubble autoShowDelay={0} />}
+      {/*
       <LeftElements pos="absolute" left="1rem" onHelpClick={handleHelpClick} />
+      */}
       <TypebotNav
         display={{ base: 'none', xl: 'flex' }}
         pos={{ base: 'absolute' }}
@@ -83,6 +87,7 @@ export const TypebotHeader = () => {
   )
 }
 
+/*
 const LeftElements = ({
   onHelpClick,
   ...props
@@ -246,6 +251,7 @@ const LeftElements = ({
     </HStack>
   )
 }
+*/
 
 const RightElements = ({
   isResultsDisplayed,
