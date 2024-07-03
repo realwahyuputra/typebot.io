@@ -2,7 +2,7 @@ import { TrashIcon } from '@/components/icons'
 import { Seo } from '@/components/Seo'
 import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
 import { useToast } from '@/hooks/useToast'
-import { isCloudProdInstance } from '@/helpers/isCloudProdInstance'
+// import { isCloudProdInstance } from '@/helpers/isCloudProdInstance'
 import {
   Flex,
   Heading,
@@ -13,8 +13,9 @@ import {
   Text,
 } from '@chakra-ui/react'
 import { Plan } from '@typebot.io/prisma'
-import { isDefined, isNotDefined } from '@typebot.io/lib'
-import { isPublicDomainAvailableQuery } from '../queries/isPublicDomainAvailableQuery'
+// import { isDefined, isNotDefined } from '@typebot.io/lib'
+import { isNotDefined } from '@typebot.io/lib'
+// import { isPublicDomainAvailableQuery } from '../queries/isPublicDomainAvailableQuery'
 import { EditableUrl } from './EditableUrl'
 // import { integrationsList } from './embeds/EmbedButton'
 import { useTypebot } from '@/features/editor/providers/TypebotProvider'
@@ -23,7 +24,7 @@ import { UpgradeButton } from '@/features/billing/components/UpgradeButton'
 import { hasProPerks } from '@/features/billing/helpers/hasProPerks'
 import { CustomDomainsDropdown } from '@/features/customDomains/components/CustomDomainsDropdown'
 import { TypebotHeader } from '@/features/editor/components/TypebotHeader'
-import { parseDefaultPublicId } from '../helpers/parseDefaultPublicId'
+// import { parseDefaultPublicId } from '../helpers/parseDefaultPublicId'
 import { useTranslate } from '@tolgee/react'
 import { env } from '@typebot.io/env'
 import DomainStatusIcon from '@/features/customDomains/components/DomainStatusIcon'
@@ -32,7 +33,8 @@ import { TypebotNotFoundPage } from '@/features/editor/components/TypebotNotFoun
 export const SharePage = () => {
   const { t } = useTranslate()
   const { workspace } = useWorkspace()
-  const { typebot, updateTypebot, publishedTypebot, is404 } = useTypebot()
+  // const { typebot, updateTypebot, publishedTypebot, is404 } = useTypebot()
+  const { typebot, updateTypebot, is404 } = useTypebot()
   const { showToast } = useToast()
 
   /*
