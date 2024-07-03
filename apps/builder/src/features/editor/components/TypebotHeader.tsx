@@ -340,6 +340,7 @@ const TypebotNav = ({
       >
         {t('editor.header.flowButton.label')}
       </Button>
+      {/*
       <Button
         as={Link}
         href={`/typebots/${typebotId}/theme`}
@@ -358,6 +359,7 @@ const TypebotNav = ({
       >
         {t('editor.header.settingsButton.label')}
       </Button>
+      */}
       <Button
         as={Link}
         href={`/typebots/${typebotId}/share`}
