@@ -41,10 +41,12 @@ export const SharePage = () => {
   const handlePublicIdChange = async (publicId: string) => {
     updateTypebot({ updates: { publicId }, save: true })
   }
+  */
 
   const publicId = typebot
     ? typebot?.publicId ?? parseDefaultPublicId(typebot.name, typebot.id)
     : ''
+  /*
   const isPublished = isDefined(publishedTypebot)
   */
 
