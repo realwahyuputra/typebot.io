@@ -15,7 +15,7 @@ import {
 import { Plan } from '@typebot.io/prisma'
 // import { isDefined, isNotDefined } from '@typebot.io/lib'
 import { isNotDefined } from '@typebot.io/lib'
-// import { isPublicDomainAvailableQuery } from '../queries/isPublicDomainAvailableQuery'
+import { isPublicDomainAvailableQuery } from '../queries/isPublicDomainAvailableQuery'
 import { EditableUrl } from './EditableUrl'
 // import { integrationsList } from './embeds/EmbedButton'
 import { useTypebot } from '@/features/editor/providers/TypebotProvider'
@@ -74,7 +74,6 @@ export const SharePage = () => {
     return true
   }
 
-  /*
   const checkIfPublicIdIsValid = async (publicId: string) => {
     const isLongerThanAllowed = publicId.length >= 4
     if (!isLongerThanAllowed && isCloudProdInstance()) {
@@ -94,7 +93,6 @@ export const SharePage = () => {
 
     return true
   }
-  */
 
   if (is404) return <TypebotNotFoundPage />
   return (
