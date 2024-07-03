@@ -37,11 +37,9 @@ export const SharePage = () => {
   const { typebot, updateTypebot, is404 } = useTypebot()
   const { showToast } = useToast()
 
-  /*
   const handlePublicIdChange = async (publicId: string) => {
     updateTypebot({ updates: { publicId }, save: true })
   }
-  */
 
   const publicId = typebot
     ? typebot?.publicId ?? parseDefaultPublicId(typebot.name, typebot.id)
