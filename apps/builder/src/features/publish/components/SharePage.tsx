@@ -97,8 +97,9 @@ export const SharePage = () => {
         <Stack maxW="1000px" w="full" pt="10" spacing={10}>
           <Stack spacing={4} align="flex-start">
             <Heading fontSize="2xl" as="h1">
-              Your typebot link
+              Your typebot slug
             </Heading>
+            {/*
             {typebot && (
               <EditableUrl
                 hostname={env.NEXT_PUBLIC_VIEWER_URL[0]}
@@ -107,6 +108,7 @@ export const SharePage = () => {
                 onPathnameChange={handlePublicIdChange}
               />
             )}
+            */}
             {typebot?.customDomain && (
               <HStack>
                 <EditableUrl
@@ -150,6 +152,7 @@ export const SharePage = () => {
             ) : null}
           </Stack>
 
+          {/*
           <Stack spacing={4}>
             <Heading fontSize="2xl" as="h1">
               Embed your typebot
@@ -164,6 +167,8 @@ export const SharePage = () => {
               ))}
             </Wrap>
           </Stack>
+          */}
+          
         </Stack>
       </Flex>
     </Flex>
