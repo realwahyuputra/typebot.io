@@ -2,7 +2,7 @@ import { TrashIcon } from '@/components/icons'
 import { Seo } from '@/components/Seo'
 import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
 import { useToast } from '@/hooks/useToast'
-// import { isCloudProdInstance } from '@/helpers/isCloudProdInstance'
+import { isCloudProdInstance } from '@/helpers/isCloudProdInstance'
 import {
   Flex,
   Heading,
