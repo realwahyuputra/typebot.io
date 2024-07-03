@@ -105,7 +105,6 @@ export const SharePage = () => {
             <Heading fontSize="2xl" as="h1">
               Your typebot slug
             </Heading>
-            {/*
             {typebot && (
               <EditableUrl
                 hostname={env.NEXT_PUBLIC_VIEWER_URL[0]}
@@ -114,7 +113,6 @@ export const SharePage = () => {
                 onPathnameChange={handlePublicIdChange}
               />
             )}
-            */}
             {typebot?.customDomain && (
               <HStack>
                 <EditableUrl
