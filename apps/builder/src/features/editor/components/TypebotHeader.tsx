@@ -32,18 +32,19 @@ import { headerHeight } from '../constants'
 import { RightPanel, useEditor } from '../providers/EditorProvider'
 import { useTypebot } from '../providers/TypebotProvider'
 import { SupportBubble } from '@/components/SupportBubble'
-import { isCloudProdInstance } from '@/helpers/isCloudProdInstance'
+// import { isCloudProdInstance } from '@/helpers/isCloudProdInstance'
 import { useTranslate } from '@tolgee/react'
 import { GuestTypebotHeader } from './UnauthenticatedTypebotHeader'
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts'
 import { useWorkspace } from '@/features/workspace/WorkspaceProvider'
-import { Plan } from '@typebot.io/prisma'
+// import { Plan } from '@typebot.io/prisma'
 
 export const TypebotHeader = () => {
   const { typebot, publishedTypebot, currentUserMode } = useTypebot()
-  const { workspace } = useWorkspace()
+  // const { workspace } = useWorkspace()
 
-  const { isOpen, onOpen } = useDisclosure()
+  // const { isOpen, onOpen } = useDisclosure()
+  const { onOpen } = useDisclosure()
   const headerBgColor = useColorModeValue('white', 'gray.900')
 
   /*
@@ -89,9 +90,10 @@ export const TypebotHeader = () => {
 }
 
 const LeftElements = ({
-  onHelpClick,
+  // onHelpClick,
   ...props
-}: StackProps & { onHelpClick: () => void }) => {
+// }: StackProps & { onHelpClick: () => void }) => {
+}: StackProps ) => {
   const { t } = useTranslate()
   const router = useRouter()
   const {
